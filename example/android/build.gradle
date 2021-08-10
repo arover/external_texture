@@ -1,18 +1,24 @@
 buildscript {
+    ext.kotlin_version = '1.5.21'
     repositories {
-        google()
-        jcenter()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        mavenLocal()
+        mavenCentral()
     }
 
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
 allprojects {
     repositories {
-        google()
-        jcenter()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        mavenLocal()
+        mavenCentral()
     }
 }
 
